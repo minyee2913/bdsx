@@ -155,5 +155,5 @@ void NativeModule::initMethods(kr::JsClassT<NativeModule>* cls) noexcept
 }
 void NativeModule::clearMethods() noexcept
 {
-	s_addressId = nullptr;
+	s_addressId = JsPropertyId();
 }

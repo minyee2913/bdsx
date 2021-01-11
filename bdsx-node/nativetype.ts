@@ -11,14 +11,6 @@ const Int32 = Primitive.Int32;
 const Float32 = Primitive.Float32;
 const Float64 = Primitive.Float64;
 
-declare global
-{
-    interface StringConstructor extends Type<string>
-    {
-        get(ptr:NativePointer):string;
-        set(ptr:NativePointer, value:string):void;
-    }
-}
 declare module './native'
 {
     namespace NativePointer
@@ -45,11 +37,15 @@ declare module './native'
         function set(ptr:NativePointer, value:Actor):void;
     }
 }
-String.get = ptr=>{
-    return ptr.getCxxString();
-};
-String.set = (ptr, value)=>{
-    ptr.setCxxString(value);
+export const CxxString = {
+    get(ptr:NativePointer):string
+    {
+        return ptr.getCxxString();
+    },
+    set(ptr:NativePointer, value:string):void
+    {
+        ptr.setCxxString(value);
+    }
 };
 
 NativePointer.size = 8;
