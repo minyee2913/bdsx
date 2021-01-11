@@ -50,8 +50,6 @@ docker run karikera/bdsx
 ```
 
 ## Build (Watch Mode)
-Watch Mode에서 rollup/babel/typescript로 빌드합니다.
-babel은 최신 문법을 es2015로 변환합니다. 그리고 이것은 소스를 적합하게 만듭니다.
 
 * VSCode로 빌드
 1. `bdsx`를 VSCode로 엽니다.

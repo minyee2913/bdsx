@@ -51,8 +51,6 @@ docker run karikera/bdsx
 ```
 
 ## Build (Watch Mode)
-It will build by rollup/babel/typescript in watch mode.  
-babel can transpile latest scripts to es2015. and it makes compatibility.
 
 * Build with VSCode
 1. Open `bdsx/` with VSCode
