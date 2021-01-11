@@ -146,7 +146,6 @@ public:
 
 	int thread() noexcept
 	{
-		char buffer[256];
 		for (;;)
 		{
 			char* dest = m_input.padding(256);
